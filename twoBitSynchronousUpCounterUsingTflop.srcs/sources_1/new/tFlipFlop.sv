@@ -15,16 +15,15 @@ module tFlipFlop(
     input logic rst,
     output logic Q
     );
-    
-    logic state;
+
     
     always_ff @ (posedge clk, posedge rst) begin
         if(rst == 1'b1) begin
-            state <= 0;
+            Q <= 0;
         end
         else case(T) 
-            1'b0: Q <= state;
-            1'b1: Q <= ~state;
+            1'b0: Q <= Q;
+            1'b1: Q <= ~Q;
         endcase
     end
 endmodule

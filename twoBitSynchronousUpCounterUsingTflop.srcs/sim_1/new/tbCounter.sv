@@ -3,7 +3,7 @@
 module tbCounter();
 
     logic clk,rst,Qmsb,Qlsb;
-    twoBitTflopCounter(.clk(clk), .rst(rst),.Qmsb(Qmsb), .Qlsb(Qlsb));
+    twoBitTflopCounter counter(.clk(clk), .rst(rst),.Qmsb(Qmsb), .Qlsb(Qlsb));
     
     always #20 clk = ~clk;
     
@@ -13,6 +13,6 @@ module tbCounter();
         #5 rst = 1'b1;
         #5 rst = 1'b0;
         #300
-        $finish
+        $finish;
     end
 endmodule

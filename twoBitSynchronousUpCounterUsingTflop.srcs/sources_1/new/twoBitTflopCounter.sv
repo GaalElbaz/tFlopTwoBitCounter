@@ -16,6 +16,6 @@ module twoBitTflopCounter(
     );
     
     tFlipFlop flopOne(.T(Qlsb),.clk(clk),.rst(rst),.Q(Qmsb));
-    tFlipFlop flopTwo(.T(1'b1),.clk(clk),.rst(rst),Q(Qlsb));
+    tFlipFlop flopTwo(.T(1'b1),.clk(clk),.rst(rst),.Q(Qlsb));
     
 endmodule
